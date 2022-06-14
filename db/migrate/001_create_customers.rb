@@ -1,17 +1,14 @@
 ## CREATE CUSTOMERS TABLE IN DATABASE
+
 class CreateCustomers < ActiveRecord::Migration[5.2]
     
-    # start off with minimal details: name & card number
     def change
+        # store name, unique card number
         create_table :customers do |t|
             t.string :first_name
             t.string :last_name
             t.integer :card_number
-            #t.string :username
-            #t.string :password
-            #t.string :address
-            #t.string :dob
-            #t.boolean :active?
+            # consider adding later: username, password, address, dob, active?
         end
     end
 
